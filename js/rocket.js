@@ -14,10 +14,27 @@ if (state == 2){
 			document.getElementById('countdown').innerHTML = countdownNumber;
 				
 
-				if (countdownNumber <= 0){
+				if (countdownNumber  >4 && countdownNumber<=7){
+					document.getElementById('nervous').className = 'nervous show';
 					
+				} else{
+					document.getElementById('nervous').className = 'nervous';
+				}
+
+
+				if (countdownNumber  >1 && countdownNumber<=4){
+					document.getElementById('cant-wait').className = 'cant-wait show';
+
+				} else{
+					document.getElementById('cant-wait').className = 'cant-wait';
+				}
+
+
+
+				if (countdownNumber<=0) {
 					changeState(3);
 				};
+
 
 	}, 500);
 } else if (state == 3){
